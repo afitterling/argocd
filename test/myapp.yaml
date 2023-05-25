@@ -1,12 +1,17 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: webnode-af
+  namespace: argocd
+  name: webnode
   labels:
     app.kubernetes.io/name: myapp
+
 spec:
+  selector:
+    matchLabels:
+      run: webnode
   containers:
-    - name: nginx
+    - name: webnode
       image: nginx:1.14.2
       ports:
       - containerPort: 80
