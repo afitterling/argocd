@@ -6,9 +6,9 @@ metadata:
   labels:
     run: webapp2
 spec:
-  selector:
-    matchLabels:
-      run: webapp2
+#  selector:
+#    matchLabels:
+#      run: webapp2
   containers:
     - name: webnode
       image: nginx:1.14.2
