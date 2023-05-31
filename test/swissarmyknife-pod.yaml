@@ -5,6 +5,8 @@ metadata:
 spec:
   containers:
   - name: swissknife
-    image: netshot
+    image: nicolaka/netshoot
+    command: ["/bin/bash"]
+    args: ["-c", "while true; do ping localhost; sleep 60;done"]
     #ports:
     #- containerPort: 80
