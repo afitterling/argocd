@@ -4,8 +4,7 @@ metadata:
   namespace: argocd
   name: webnode
   labels:
-    app.kubernetes.io/name: myapp
-
+    app.kubernetes.io/name: webnode
 spec:
   selector:
     matchLabels:
