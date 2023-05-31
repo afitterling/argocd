@@ -1,16 +1,21 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  namespace: teamtwo
-  name: nginx
+  name: nginx-deployment
   labels:
-    run: myapp
+    app: nginx
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      run: myapp
-  containers:
-  - name: nginx
-    image: nginx:1.14.2
-    ports:
-    - containerPort: 80
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
