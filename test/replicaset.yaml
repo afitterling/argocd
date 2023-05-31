@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  namespace: argocd
+  namespace: teamtwo
   name: frontend
   labels:
     app: guestbook
