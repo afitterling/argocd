@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: swissknife
+spec:
+  containers:
+  - name: swissknife
+    image: netshot
+    #ports:
+    #- containerPort: 80
